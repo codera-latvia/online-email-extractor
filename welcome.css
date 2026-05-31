@@ -1,0 +1,481 @@
+/* Online Email Extractor — welcome page (simplified v2)
+   Two large steps with browser mockups. Material Minimal tokens.
+*/
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--mm-font-sans);
+  color: var(--mm-fg-2);
+  background: var(--mm-bg-2);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============ Layout ============ */
+.w-page {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(51,181,229,0.10), transparent 38%),
+    radial-gradient(circle at 100% 12%, rgba(18,102,241,0.10), transparent 42%),
+    var(--mm-bg-2);
+  min-height: 100vh;
+}
+.w-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============ Top bar ============ */
+.w-topbar {
+  padding: 28px 0;
+}
+.w-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--mm-fg-1);
+}
+.w-brand-icon {
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.w-brand-icon svg, .w-brand-icon img { display: block; width: 100%; height: 100%; }
+.w-brand-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--mm-fg-1);
+  letter-spacing: -0.005em;
+}
+
+/* ============ Hero ============ */
+.w-hero {
+  text-align: center;
+  padding: 80px 0 56px;
+}
+.w-success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mm-success);
+  background: var(--mm-success-100);
+  padding: 8px 14px;
+  border-radius: var(--mm-radius-pill);
+  margin-bottom: 22px;
+}
+.w-hero-h1 {
+  font: 300 56px/1.1 var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 18px;
+  letter-spacing: -0.018em;
+}
+.w-hero-h1 strong { font-weight: 500; color: var(--mm-primary); }
+.w-hero-brand-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  vertical-align: middle;
+}
+.w-hero-brand-icon {
+  display: inline-flex;
+  width: 64px; height: 64px;
+  flex-shrink: 0;
+}
+.w-hero-brand-icon img, .w-hero-brand-icon svg {
+  display: block; width: 100%; height: 100%;
+}
+p.w-hero-lede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--mm-fg-2);
+  margin: 0 auto;
+  max-width: 660px;
+  text-align: center;
+}
+
+/* ============ Steps ============ */
+.w-step {
+  padding: 56px 0 72px;
+}
+.w-step:last-child { padding-bottom: 96px; }
+.w-step + .w-step { padding-top: 16px; }
+.w-step-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.w-step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--mm-primary);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  box-shadow: var(--mm-shadow-primary);
+  margin-bottom: 18px;
+}
+.w-step-title {
+  font: 500 36px/1.2 var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 14px;
+  letter-spacing: -0.012em;
+}
+p.w-step-text {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--mm-fg-2);
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+}
+.w-step-text strong { color: var(--mm-fg-1); font-weight: 500; }
+
+/* ============ Browser mock ============ */
+.w-mock--image {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+.w-mock--image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--mm-radius-7);
+  box-shadow: var(--mm-shadow-5);
+}
+.w-mock {
+  background: #fff;
+  border-radius: var(--mm-radius-7);
+  box-shadow: var(--mm-shadow-5);
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+/* chrome */
+.w-mock-chrome {
+  background: #ebecef;
+  padding: 10px 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.w-mock-row {
+  display: flex; align-items: center; gap: 14px;
+}
+.w-mock-dots { display: flex; gap: 7px; }
+.w-mock-dots span { width: 12px; height: 12px; border-radius: 50%; }
+.w-mock-tabs {
+  display: flex; align-items: flex-end; gap: 0;
+  margin-left: 4px;
+}
+.w-mock-tab {
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 14px 10px;
+  font-size: 12.5px;
+  color: var(--mm-fg-1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 220px;
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.03);
+  position: relative;
+}
+.w-mock-tab i.fav { color: var(--mm-primary); font-size: 11px; }
+.w-mock-tab .close {
+  color: var(--mm-fg-3);
+  font-size: 10px;
+  margin-left: 4px;
+}
+.w-mock-tab--inactive {
+  background: #dcdee1;
+  color: var(--mm-fg-3);
+  margin-left: 2px;
+}
+
+.w-mock-actions {
+  display: flex; align-items: center; gap: 14px;
+  padding: 8px 4px 12px;
+}
+.w-mock-back {
+  display: flex; align-items: center; gap: 14px;
+  color: var(--mm-fg-3);
+  font-size: 14px;
+}
+.w-mock-back i { cursor: default; }
+.w-mock-url {
+  flex: 1;
+  background: #fff;
+  border-radius: var(--mm-radius-pill);
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--mm-fg-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+.w-mock-url i.lock { color: var(--mm-success); font-size: 11px; }
+.w-mock-url-host { color: var(--mm-fg-1); font-weight: 500; }
+.w-mock-url-path { color: var(--mm-fg-3); }
+.w-mock-toolbar {
+  display: flex; align-items: center; gap: 14px;
+  color: var(--mm-fg-3);
+  font-size: 15px;
+  position: relative;
+}
+.w-mock-toolbar > i { cursor: default; }
+.w-mock-toolbar .puzzle {
+  width: 32px; height: 32px;
+  border-radius: var(--mm-radius-3);
+  display: grid; place-items: center;
+  color: var(--mm-fg-2);
+  transition: background var(--mm-dur-fast) var(--mm-ease);
+  cursor: pointer;
+}
+.w-mock-toolbar .puzzle:hover { background: rgba(0,0,0,0.06); }
+.w-mock-toolbar .puzzle.is-active {
+  background: var(--mm-primary-100);
+  color: var(--mm-primary);
+}
+.w-mock-ext-slot {
+  width: 32px; height: 32px;
+  border-radius: var(--mm-radius-3);
+  display: grid; place-items: center;
+  background: rgba(0,0,0,0.04);
+  position: relative;
+  overflow: visible;
+}
+.w-mock-ext-slot--pinned {
+  background: transparent;
+}
+.w-mock-ext-slot .ext-mark {
+  width: 24px; height: 24px;
+  display: grid; place-items: center;
+}
+.w-mock-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--mm-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  display: grid; place-items: center;
+}
+
+/* ----- Body (page content stub) ----- */
+.w-mock-body {
+  padding: 32px 36px 48px;
+  background: #fff;
+  position: relative;
+  min-height: 360px;
+}
+.w-mock-stub h3 {
+  font: 500 26px/1.25 var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+.w-mock-stub .line {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.06);
+  margin-bottom: 10px;
+}
+.w-mock-stub .line.w90 { width: 90%; }
+.w-mock-stub .line.w70 { width: 70%; }
+.w-mock-stub .line.w80 { width: 80%; }
+.w-mock-stub .line.w60 { width: 60%; }
+.w-mock-stub .gap { height: 18px; }
+
+/* ============ Puzzle dropdown (Step 1) ============ */
+.w-puzzle-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 4px;
+  width: 320px;
+  background: #fff;
+  border-radius: var(--mm-radius-5);
+  box-shadow: var(--mm-shadow-5);
+  padding: 8px;
+  z-index: 5;
+}
+.w-puzzle-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  width: 16px; height: 16px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-top-left-radius: 3px;
+  box-shadow: -2px -2px 4px -2px rgba(0,0,0,0.06);
+}
+.w-puzzle-menu-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mm-fg-3);
+  padding: 8px 10px 6px;
+}
+.w-puzzle-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--mm-radius-3);
+  transition: background var(--mm-dur-fast) var(--mm-ease);
+  position: relative;
+}
+.w-puzzle-item:hover { background: var(--mm-bg-3); }
+.w-puzzle-item.is-target {
+  background: var(--mm-primary-100);
+  outline: 2px solid var(--mm-primary);
+  outline-offset: -2px;
+}
+.w-puzzle-item-icon {
+  width: 22px; height: 22px;
+  border-radius: var(--mm-radius-2);
+  display: grid; place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.w-puzzle-item-icon.is-gray { background: var(--mm-bg-4); color: var(--mm-fg-3); font-size: 11px; font-weight: 500; }
+.w-puzzle-item-name {
+  flex: 1; min-width: 0;
+  font-size: 13px;
+  color: var(--mm-fg-1);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.w-puzzle-item.is-target .w-puzzle-item-name { font-weight: 500; color: var(--mm-primary); }
+.w-puzzle-pin {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--mm-fg-4);
+  font-size: 12px;
+  transition: background var(--mm-dur-fast) var(--mm-ease), color var(--mm-dur-fast) var(--mm-ease);
+}
+.w-puzzle-pin.is-on {
+  background: var(--mm-primary);
+  color: #fff;
+  box-shadow: var(--mm-shadow-primary);
+  animation: pinPulse 2.4s ease-in-out infinite;
+}
+@keyframes pinPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* ============ Annotation arrow + callout ============ */
+.w-callout {
+  position: absolute;
+  display: flex; align-items: center; gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mm-primary);
+  z-index: 10;
+}
+.w-callout-bubble {
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: var(--mm-radius-pill);
+  box-shadow: var(--mm-shadow-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: var(--mm-primary);
+}
+.w-callout-bubble i { font-size: 12px; }
+
+/* Step 1 callouts */
+.w-callout--step1a {
+  top: -42px;
+  right: 96px;
+}
+.w-callout--step1a .arrow {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  color: var(--mm-primary);
+}
+.w-callout--step1b {
+  top: 124px;
+  right: 360px;
+}
+.w-callout--step1b .arrow {
+  width: 48px; height: 36px;
+  display: grid; place-items: center;
+  color: var(--mm-primary);
+}
+
+/* Step 2 callout */
+.w-callout--step2 {
+  top: -42px;
+  right: 96px;
+}
+.w-callout--step2 .arrow {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  color: var(--mm-primary);
+}
+
+/* ============ Step 2 popup overlay ============ */
+.w-mock-popup-anchor {
+  position: absolute;
+  top: 100px;
+  right: 16px;
+  display: flex; flex-direction: column; align-items: flex-end;
+  z-index: 4;
+  filter: drop-shadow(0 18px 32px rgba(18,102,241,0.18));
+}
+.w-mock-popup-anchor .oee-popup {
+  width: 380px;
+  border-radius: var(--mm-radius-6);
+  box-shadow: var(--mm-shadow-5);
+}
+.w-mock-popup-tip {
+  width: 0; height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--mm-primary);
+  margin-right: 38px;
+}
+
+/* ============ Footer ============ */
+.w-foot {
+  padding: 48px 0 56px;
+  text-align: center;
+  color: var(--mm-fg-3);
+  font-size: 13px;
+}
+.w-foot a { color: var(--mm-fg-2); text-decoration: none; margin: 0 10px; }
+.w-foot a:hover { color: var(--mm-primary); }
+
+/* ============ Responsive ============ */
+@media (max-width: 960px) {
+  .w-hero-h1 { font-size: 42px; }
+  .w-step-title { font-size: 28px; }
+  .w-callout { display: none; }
+  .w-mock-popup-anchor { right: 8px; top: 80px; }
+  .w-mock-popup-anchor .oee-popup { width: 320px; }
+}
+@media (max-width: 720px) {
+  .w-hero-h1 { font-size: 34px; }
+  .w-hero-lede { font-size: 16px; }
+  .w-step-title { font-size: 24px; }
+  .w-step-text { font-size: 15px; }
+  .w-mock-url-path { display: none; }
+  .w-mock-body { min-height: 280px; padding: 20px; }
+  .w-mock-popup-anchor { display: none; }
+  .w-mock-tab--inactive { display: none; }
+}

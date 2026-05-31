@@ -1,0 +1,247 @@
+/* ============================================================
+   Material Minimal — design tokens
+   "Design less, impact more."
+
+   Single source of truth for colors, type, shadows, radii, motion.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+:root {
+  /* ---------- BRAND ---------- */
+  --mm-primary:        #1266F1; /* MDB Standard primary blue, action color */
+  --mm-primary-700:    #0a4cba;
+  --mm-primary-300:    #5a8dee;
+  --mm-primary-100:    #e7f0fe; /* badge bg / hover wash */
+  --mm-accent:         #33b5e5; /* classic MD light-blue, used in wave/cloud motifs */
+  --mm-accent-100:     #e6f6fc;
+
+  /* ---------- SEMANTIC ---------- */
+  --mm-success:        #00b74a;
+  --mm-success-100:    #d6f5e1;
+  --mm-danger:         #f93154;
+  --mm-danger-100:     #fcdbe1;
+  --mm-warning:        #ffa900;
+  --mm-warning-100:    #fff1cc;
+  --mm-info:           #39c0ed;
+  --mm-info-100:       #d6f1f9;
+
+  /* ---------- NEUTRALS ---------- */
+  --mm-fg-1:           #262626; /* primary text, headings */
+  --mm-fg-2:           #4f4f4f; /* body text */
+  --mm-fg-3:           #757575; /* secondary text, captions */
+  --mm-fg-4:           #9e9e9e; /* placeholder, disabled label */
+  --mm-bg-1:           #ffffff; /* default surface */
+  --mm-bg-2:           #fbfbfb; /* light app background */
+  --mm-bg-3:           #f5f5f5; /* subtle panel */
+  --mm-bg-4:           #eeeeee; /* divider / chip bg */
+  --mm-border:         rgba(0, 0, 0, 0.10);
+  --mm-border-strong:  rgba(0, 0, 0, 0.18);
+
+  /* ---------- DARK MIRROR (for components on dark surfaces) ---------- */
+  --mm-dark-bg-1:      #262626;
+  --mm-dark-bg-2:      #1f1f1f;
+  --mm-dark-fg-1:      #ffffff;
+  --mm-dark-fg-2:      rgba(255, 255, 255, 0.7);
+  --mm-dark-fg-3:      rgba(255, 255, 255, 0.5);
+
+  /* ---------- TYPE ---------- */
+  --mm-font-sans:      "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mm-font-mono:      ui-monospace, "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+
+  /* roles */
+  --mm-display-size:   3.75rem;   /* 60px */
+  --mm-display-weight: 300;
+  --mm-display-lh:     1.15;
+
+  --mm-h1-size:        2.5rem;    /* 40px */
+  --mm-h1-weight:      500;
+  --mm-h1-lh:          1.2;
+
+  --mm-h2-size:        2rem;      /* 32px */
+  --mm-h2-weight:      500;
+  --mm-h2-lh:          1.25;
+
+  --mm-h3-size:        1.5rem;    /* 24px */
+  --mm-h3-weight:      500;
+  --mm-h3-lh:          1.3;
+
+  --mm-h4-size:        1.25rem;   /* 20px */
+  --mm-h4-weight:      500;
+  --mm-h4-lh:          1.35;
+
+  --mm-h5-size:        1.125rem;  /* 18px */
+  --mm-h5-weight:      500;
+  --mm-h5-lh:          1.4;
+
+  --mm-h6-size:        1rem;      /* 16px */
+  --mm-h6-weight:      500;
+  --mm-h6-lh:          1.4;
+
+  --mm-body1-size:     1rem;      /* 16px */
+  --mm-body1-weight:   400;
+  --mm-body1-lh:       1.6;
+
+  --mm-body2-size:     0.875rem;  /* 14px */
+  --mm-body2-weight:   400;
+  --mm-body2-lh:       1.55;
+
+  --mm-caption-size:   0.75rem;   /* 12px */
+  --mm-caption-weight: 400;
+  --mm-caption-lh:     1.5;
+
+  --mm-overline-size:  0.6875rem; /* 11px */
+  --mm-overline-weight:500;
+  --mm-overline-tracking: 0.08em;
+
+  --mm-button-size:    0.875rem;  /* 14px */
+  --mm-button-weight:  500;
+  --mm-button-tracking:0.06em;
+
+  /* ---------- RADII (MDB scale 0–9) ---------- */
+  --mm-radius-0:       0;
+  --mm-radius-1:       0.2rem;
+  --mm-radius-2:       0.25rem;
+  --mm-radius-3:       0.3rem;
+  --mm-radius-4:       0.375rem;
+  --mm-radius-5:       0.5rem;
+  --mm-radius-6:       0.75rem;
+  --mm-radius-7:       1rem;
+  --mm-radius-8:       1.25rem;
+  --mm-radius-9:       1.5rem;
+  --mm-radius-pill:    50rem;
+  --mm-radius-circle:  50%;
+
+  /* ---------- SHADOWS (light, 5-grade) ---------- */
+  --mm-shadow-1: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --mm-shadow-2: 0 2px 6px -1px rgba(0, 0, 0, 0.06), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --mm-shadow-3: 0 2px 10px -2px rgba(0, 0, 0, 0.07), 0 6px 12px -2px rgba(0, 0, 0, 0.04);
+  --mm-shadow-4: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04); /* default for cards */
+  --mm-shadow-5: 0 5px 25px -5px rgba(0, 0, 0, 0.10), 0 18px 36px -6px rgba(0, 0, 0, 0.06);
+
+  /* dark, 5-grade — heavier */
+  --mm-shadow-dark-1: 0 2px 4px -1px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20);
+  --mm-shadow-dark-4: 0 2px 15px -3px rgba(0, 0, 0, 0.35), 0 10px 20px -2px rgba(0, 0, 0, 0.20);
+  --mm-shadow-dark-5: 0 5px 25px -5px rgba(0, 0, 0, 0.45), 0 18px 36px -6px rgba(0, 0, 0, 0.30);
+
+  /* colored shadows (subtle accent under filled buttons) */
+  --mm-shadow-primary: 0 4px 9px -4px rgba(18, 102, 241, 0.35);
+  --mm-shadow-success: 0 4px 9px -4px rgba(0, 183, 74, 0.35);
+  --mm-shadow-danger:  0 4px 9px -4px rgba(249, 49, 84, 0.35);
+  --mm-shadow-warning: 0 4px 9px -4px rgba(255, 169, 0, 0.35);
+  --mm-shadow-info:    0 4px 9px -4px rgba(57, 192, 237, 0.35);
+
+  /* ---------- SPACING (4px grid) ---------- */
+  --mm-space-0:  0;
+  --mm-space-1:  0.25rem;
+  --mm-space-2:  0.5rem;
+  --mm-space-3:  1rem;
+  --mm-space-4:  1.5rem;
+  --mm-space-5:  3rem;
+  --mm-space-6:  6rem;   /* section gap */
+  --mm-space-7:  9rem;
+
+  /* ---------- MOTION ---------- */
+  --mm-ease:        cubic-bezier(0.25, 0.1, 0.25, 1);
+  --mm-ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
+  --mm-dur-fast:    150ms;
+  --mm-dur-base:    250ms;
+  --mm-dur-slow:    350ms;
+
+  /* ---------- LAYOUT ---------- */
+  --mm-container:   1140px;
+  --mm-container-sm: 720px;
+  --mm-container-md: 960px;
+  --mm-container-xl: 1320px;
+}
+
+/* ============================================================
+   Semantic element styles — opt-in by adding `mm` class on root
+   or applying these directly.
+   ============================================================ */
+
+.mm, .mm body {
+  font-family: var(--mm-font-sans);
+  color: var(--mm-fg-2);
+  background: var(--mm-bg-2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.mm h1, .mm-h1 {
+  font: var(--mm-h1-weight) var(--mm-h1-size)/var(--mm-h1-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+.mm h2, .mm-h2 {
+  font: var(--mm-h2-weight) var(--mm-h2-size)/var(--mm-h2-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 0.875rem;
+  letter-spacing: -0.005em;
+}
+.mm h3, .mm-h3 {
+  font: var(--mm-h3-weight) var(--mm-h3-size)/var(--mm-h3-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 0.75rem;
+}
+.mm h4, .mm-h4 {
+  font: var(--mm-h4-weight) var(--mm-h4-size)/var(--mm-h4-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 0.625rem;
+}
+.mm h5, .mm-h5 {
+  font: var(--mm-h5-weight) var(--mm-h5-size)/var(--mm-h5-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 0.5rem;
+}
+.mm h6, .mm-h6 {
+  font: var(--mm-h6-weight) var(--mm-h6-size)/var(--mm-h6-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  margin: 0 0 0.5rem;
+}
+
+.mm-display {
+  font: var(--mm-display-weight) var(--mm-display-size)/var(--mm-display-lh) var(--mm-font-sans);
+  color: var(--mm-fg-1);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.mm p, .mm-body1 {
+  font: var(--mm-body1-weight) var(--mm-body1-size)/var(--mm-body1-lh) var(--mm-font-sans);
+  color: var(--mm-fg-2);
+  margin: 0 0 1rem;
+}
+.mm-body2 {
+  font: var(--mm-body2-weight) var(--mm-body2-size)/var(--mm-body2-lh) var(--mm-font-sans);
+  color: var(--mm-fg-2);
+}
+.mm-caption {
+  font: var(--mm-caption-weight) var(--mm-caption-size)/var(--mm-caption-lh) var(--mm-font-sans);
+  color: var(--mm-fg-3);
+}
+.mm-overline {
+  font: var(--mm-overline-weight) var(--mm-overline-size)/1 var(--mm-font-sans);
+  letter-spacing: var(--mm-overline-tracking);
+  text-transform: uppercase;
+  color: var(--mm-fg-3);
+}
+
+.mm a, a.mm-link {
+  color: var(--mm-primary);
+  text-decoration: none;
+  transition: color var(--mm-dur-fast) var(--mm-ease);
+}
+.mm a:hover, a.mm-link:hover { color: var(--mm-primary-700); }
+
+.mm code, code.mm-code {
+  font-family: var(--mm-font-mono);
+  font-size: 0.875em;
+  background: var(--mm-bg-3);
+  padding: 0.125em 0.375em;
+  border-radius: var(--mm-radius-1);
+  color: var(--mm-fg-1);
+}
